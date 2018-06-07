@@ -1,0 +1,6 @@
+eureka:
+  instance:
+    hostname: fastdfs.chunzeacademy.com
+  client:
+    service-url:
+      defaultZone: http://eurekamaster.chunzeacademy.com:8761/eureka/,http://eurekaslave.chunzeacademy.com:8761/eureka/

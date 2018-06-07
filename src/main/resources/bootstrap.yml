@@ -1,0 +1,18 @@
+server:  
+  port: 8889  
+eureka:  
+  client:  
+    service-url:  
+      defaultZone: http://eureka:chunze1qaz2wsx@eurekamaster.chunzeacademy.com:8761/eureka/,http://eureka:chunze1qaz2wsx@eurekaslave.chunzeacademy.com:8761/eureka/  
+  instance:  
+    prefer-ip-address: true  
+spring:  
+  application:  
+      name: config-server 
+  cloud:  
+    config:  
+      server:  
+        git:  
+          uri: https://github.com/chunhuiwang/configserver/</span>     # 配置gitlab仓库的地址  
+          searchPaths: conf*,config*
+          

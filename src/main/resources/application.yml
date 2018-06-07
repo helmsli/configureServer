@@ -1,0 +1,23 @@
+server:  
+  port: 9889  
+eureka:  
+  client:  
+    service-url:  
+      defaultZone: http://eureka:card1qaz2wsx@172.18.10.234:9761/eureka,http://eureka:card1qaz2wsx@172.18.10.233:9761/eureka,http://eureka:card1qaz2wsx@172.18.10.232:9761/eureka
+  instance:  
+    hostname: 172.18.10.233
+    prefer-ip-address: true
+    instance-id: ${server.instance.hostname}:${server.port}
+spring:  
+  application:  
+      name: config-server 
+  cloud:  
+    config:  
+      server:  
+        git:  
+          username: config
+          password: config1qaz2wsx
+          uri: http://http://172.18.10.231/config/config.git
+          searchPaths: conf*,config*
+          basedir: /usr/xinwei/cardconfig/
+          default-label: master 
